@@ -1,0 +1,15 @@
+.box-card[data-v-02121a82] .el-card__header {
+  padding: 10px 20px !important;
+}
+.card-header[data-v-02121a82] {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+}
+.item[data-v-02121a82] {
+  margin-bottom: 10px;
+}
+.content-row[data-v-245451ae] {
+  margin-top: 25px;
+}
