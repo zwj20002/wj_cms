@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    //目标代码需要使用的模块化方案（commomjs）
+    "module": "esnext",
+    //进行一些严格的检查
+    "strict": true,
+    //对jsx进行怎样的处理
+    "jsx": "preserve",
+    //按照node的方式去解析模块 import "/index.node"
+    "moduleResolution": "node",
+    //跳过一些库的类型检测
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "useDefineForClassFields": true,
+    //要不要生成映射文件（ts -> js）
+    "sourceMap": true,
+    //文件路径在解析时候，基本的url
+    "baseUrl": ".",
+    //指定具体要使用的类型
+    "types": ["webpack-env"],
+    //路径解析
+    "paths": {
+      "@/*": ["src/*"],
+      "vuex": ["node_modules/vuex/types/index.d.ts"],
+      "vue-router": ["node_modules/........"]
+    },
+    // "suppressImplicitAnyIndexErrors": true, //加入这段代码解决main.ts报错问题
+    //可以指定在项目中可以使用哪里库的类型（Proxy/window/Document）
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+    "outDir": "./"
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "tests/**/*.ts",
+    "tests/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+]
+}
+
